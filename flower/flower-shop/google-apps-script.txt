@@ -1,0 +1,84 @@
+// Google Apps Script для сайта Florina
+// Вставьте этот код в Google Таблице: Расширения → Apps Script.
+// В первой строке замените ВАШ_ID_ТАБЛИЦЫ на ID своей Google Таблицы.
+
+const SPREADSHEET_ID = "ВАШ_ID_ТАБЛИЦЫ";
+
+function doPost(e) {
+  try {
+    const data = JSON.parse(e.postData.contents);
+    const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+
+    if (data.type === "order") {
+      const sheet = getOrCreateSheet_(ss, "Заказы", [
+        "Дата",
+        "Имя",
+        "Телефон",
+        "Адрес",
+        "Комментарий",
+        "Состав заказа",
+        "Сумма"
+      ]);
+
+      const items = (data.items || [])
+        .map(function(item) {
+          return item.title + " — " + item.qty + " шт. × " + item.price + " ₽";
+        })
+        .join("\n");
+
+      sheet.appendRow([
+        data.createdAt || new Date(),
+        data.name || "",
+        data.phone || "",
+        data.address || "",
+        data.comment || "",
+        items,
+        data.total || 0
+      ]);
+
+      return json_({ status: "success", type: "order" });
+    }
+
+    const sheet = getOrCreateSheet_(ss, "Вопросы", [
+      "Дата",
+      "Тип формы",
+      "Имя",
+      "Телефон",
+      "Сообщение",
+      "Страница"
+    ]);
+
+    sheet.appendRow([
+      data.createdAt || new Date(),
+      data.type || "question",
+      data.name || "",
+      data.phone || "",
+      data.comment || "",
+      data.page || ""
+    ]);
+
+    return json_({ status: "success", type: data.type || "question" });
+  } catch (error) {
+    return json_({ status: "error", message: String(error) });
+  }
+}
+
+function getOrCreateSheet_(ss, name, headers) {
+  let sheet = ss.getSheetByName(name);
+
+  if (!sheet) {
+    sheet = ss.insertSheet(name);
+  }
+
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(headers);
+  }
+
+  return sheet;
+}
+
+function json_(data) {
+  return ContentService
+    .createTextOutput(JSON.stringify(data))
+    .setMimeType(ContentService.MimeType.JSON);
+}

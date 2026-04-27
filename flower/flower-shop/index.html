@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Florina — цветочный магазин</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__main">Florina</span>
+        <span class="logo__sub">цветы и подарки</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="#about">О нас</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" id="favoriteBtn" aria-label="Избранное">♡ <span id="favoriteCount">0</span></button>
+        <a class="icon-btn" href="cart.html" aria-label="Корзина">🛒 <span id="cartCount">0</span></a>
+        <button class="burger" id="burger" aria-label="Открыть меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero__content">
+        <p class="eyebrow">Доставка букетов в день заказа</p>
+        <h1>Создаём моменты, которые хочется помнить</h1>
+        <p class="hero__text">Авторские букеты, воздушные шары и подарочные наборы для тех, кого вы любите и цените.</p>
+        <div class="hero__buttons">
+          <a class="btn btn--orange" href="catalog.html">Перейти в каталог</a>
+          <a class="btn btn--light" href="#callback">Оставить заявку</a>
+        </div>
+      </div>
+      <div class="hero__image">
+        <img src="images/68439c910bf6532aedd9f63595811c65 (1).jpg" alt="Букет с цветами и шарами" />
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section__head">
+        <h2>Хит продаж:</h2>
+        <p>Цветы в едином стиле — готовое решение для праздника, свидания или приятного сюрприза.</p>
+      </div>
+
+      <div class="slider" data-slider="combo">
+        <button class="slider__arrow slider__arrow--left" data-prev>‹</button>
+        <div class="products" data-track>
+                    <article class="product-card" data-id="1" data-title="Ромашковое облако" data-price="5000">
+            <button class="like" data-like>♡</button>
+            <img src="images/Ромашковое облако.jpeg" alt="Ромашковое облако" />
+            <h3>Ромашковое облако</h3>
+            <p class="price">5 000 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-id="2" data-title="Выбирать чудо" data-price="7500">
+            <button class="like" data-like>♡</button>
+            <img src="images/Выбирать чудо.jpg" alt="Выбирать чудо" />
+            <h3>Выбирать чудо</h3>
+            <p class="price">7 500 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-id="3" data-title="Нежный повод" data-price="6500">
+            <button class="like" data-like>♡</button>
+            <img src="images/Нежный повод.jpg" alt="Нежный повод" />
+            <h3>Нежный повод</h3>
+            <p class="price">6 500 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-id="9" data-title="Персиковый комплимент" data-price="5900">
+            <button class="like" data-like>♡</button>
+            <img src="images/Персиковый комплект.jpg" alt="Персиковый комплимент" />
+            <h3>Персиковый комплимент</h3>
+            <p class="price">5 900 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-id="11" data-title="Лавандовый вечер" data-price="6900">
+            <button class="like" data-like>♡</button>
+            <img src="images/Лавандовыйbbc0be63ef5833856587eec7d766c3f6.jpg" alt="Лавандовый вечер" />
+            <h3>Лавандовый вечер</h3>
+            <p class="price">6 900 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-id="12" data-title="Кремовая нежность" data-price="6200">
+            <button class="like" data-like>♡</button>
+            <img src="images/Кремовый.jpg" alt="Кремовая нежность" />
+            <h3>Кремовая нежность</h3>
+            <p class="price">6 200 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+        </div>
+        <button class="slider__arrow slider__arrow--right" data-next>›</button>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section__head">
+        <h2>Актуальные сезонные букеты</h2>
+        <p>Композиции с живым настроением сезона: тёплые оттенки, мягкая упаковка и свежие цветы.</p>
+      </div>
+
+      <div class="slider" data-slider="season">
+        <button class="slider__arrow slider__arrow--left" data-prev>‹</button>
+        <div class="products products--grid" data-track>
+          <article class="product-card" data-id="4" data-title="Оранжевое солнце" data-price="3500">
+            <button class="like" data-like>♡</button>
+            <img src="images/Оранжевое солнце.jpg" alt="Оранжевое солнце" />
+            <h3>Оранжевое солнце</h3>
+            <p class="price">3 500 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-id="5" data-title="Тёмная ночь" data-price="4600">
+            <button class="like" data-like>♡</button>
+            <img src="images/Тёмная ночь.jpg" alt="Тёмная ночь" />
+            <h3>Тёмная ночь</h3>
+            <p class="price">4 600 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-id="6" data-title="Тёплое признание" data-price="4200">
+            <button class="like" data-like>♡</button>
+            <img src="images/Тёплое признание.jpg" alt="Тёплое признание" />
+            <h3>Тёплое признание</h3>
+            <p class="price">4 200 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-id="10" data-title="Утренний свет" data-price="3900">
+            <button class="like" data-like>♡</button>
+            <img src="images/Утренний свет.jpg" alt="Утренний свет" />
+            <h3>Утренний свет</h3>
+            <p class="price">3 900 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-id="13" data-title="Солнечный акцент" data-price="3700">
+            <button class="like" data-like>♡</button>
+            <img src="images/Солнечный.jpg" alt="Солнечный акцент" />
+            <h3>Солнечный акцент</h3>
+            <p class="price">3 700 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-id="14" data-title="Вечерний букет" data-price="4800">
+            <button class="like" data-like>♡</button>
+            <img src="images/Вечерний.jpg" alt="Вечерний букет" />
+            <h3>Вечерний букет</h3>
+            <p class="price">4 800 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-id="15" data-title="Тёплая классика" data-price="4400">
+            <button class="like" data-like>♡</button>
+            <img src="images/Теплый.jpg" alt="Тёплая классика" />
+            <h3>Тёплая классика</h3>
+            <p class="price">4 400 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+        </div>
+        <button class="slider__arrow slider__arrow--right" data-next>›</button>
+      </div>
+    </section>
+
+    <section class="about container" id="about">
+      <div class="about__card">
+        <p class="eyebrow">/ о магазине</p>
+        <h2>Наша миссия — относиться к клиентам как к близким людям</h2>
+        <p>Мы бережно собираем букеты, подбираем сочетания цветов и помогаем выбрать подарок под настроение события. Для нас важны свежесть, аккуратность и эмоции, которые получает человек вместе с букетом.</p>
+      </div>
+    </section>
+
+    <section class="section section--split container" id="faq">
+      <div>
+        <h2>Частые вопросы</h2>
+        <p class="muted">Ответы на вопросы, которые чаще всего появляются перед заказом.</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq__item active">
+          <button class="faq__question">Можно ли заказать букет день в день?<span>×</span></button>
+          <div class="faq__answer">Да, если нужные цветы есть в наличии. Менеджер уточнит состав и предложит ближайшее время доставки.</div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question">Можно ли изменить состав букета?<span>+</span></button>
+          <div class="faq__answer">Да. Мы можем заменить оттенки, упаковку или отдельные цветы с учётом бюджета и повода.</div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question">Как долго простоят цветы?<span>+</span></button>
+          <div class="faq__answer">В среднем от 5 до 10 дней. Срок зависит от сорта цветов, температуры и ухода.</div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question">Есть ли доставка по городу?<span>+</span></button>
+          <div class="faq__answer">Да, доставка работает ежедневно. Стоимость зависит от района и времени доставки.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="callback container" id="callback">
+      <h2>Остались вопросы?</h2>
+      <p>Оставьте заявку — мы свяжемся с вами и поможем выбрать подходящий букет.</p>
+
+      <form class="form" id="callbackForm">
+        <input type="text" name="name" placeholder="Ваше имя" required />
+        <input type="tel" name="phone" placeholder="Телефон" required />
+        <button class="btn btn--green" type="submit">Оставить заявку</button>
+      </form>
+      <p class="form-message" id="formMessage"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <a href="index.html" class="logo logo--footer">
+          <span class="logo__main">Florina</span>
+          <span class="logo__sub">цветы и подарки</span>
+        </a>
+        <p>Создавайте моменты вместе с нами</p>
+      </div>
+
+      <nav class="footer__nav">
+        <a href="catalog.html">Каталог</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="footer__contacts">
+        <p>+7 900 889-99-99</p>
+        <p>г. Самара, ул. Цветочная, 15</p>
+        <p>10:00–20:00</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+

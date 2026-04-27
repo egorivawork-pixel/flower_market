@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Корзина — Florina</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__main">Florina</span>
+        <span class="logo__sub">цветы и подарки</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <div class="header__actions">
+        <a class="icon-btn" href="cart.html">🛒 <span id="cartCount">0</span></a>
+        <button class="burger" id="burger" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero container">
+      <p class="eyebrow">/ заказ</p>
+      <h1>Корзина</h1>
+      <p>Здесь отображаются товары, которые вы добавили из каталога.</p>
+    </section>
+
+    <section class="cart container">
+      <div class="cart__list" id="cartList"></div>
+
+      <aside class="cart__summary">
+        <h2>Итого</h2>
+        <p class="cart__total" id="cartTotal">0 ₽</p>
+
+        <form class="order-form" id="orderForm">
+          <input type="text" name="name" placeholder="Ваше имя" required>
+          <input type="tel" name="phone" placeholder="Телефон" required>
+          <input type="text" name="address" placeholder="Адрес доставки">
+          <textarea name="comment" placeholder="Комментарий к заказу"></textarea>
+          <button class="btn btn--orange" type="submit">Оформить заказ</button>
+        </form>
+
+        <p class="form-message" id="orderMessage"></p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>Florina — цветочный магазин</p>
+      <p>Демонстрационный сайт для дипломного проекта</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+

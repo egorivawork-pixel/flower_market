@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Контакты — Florina</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__main">Florina</span>
+        <span class="logo__sub">цветы и подарки</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <div class="header__actions">
+        <a class="icon-btn" href="cart.html">🛒 <span id="cartCount">0</span></a>
+        <button class="burger" id="burger" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero container">
+      <p class="eyebrow">/ контакты</p>
+      <h1>Свяжитесь с нами</h1>
+      <p>Мы поможем подобрать букет, оформить доставку и ответим на вопросы по заказу.</p>
+    </section>
+
+    <section class="contacts container">
+      <div class="contacts__info">
+        <div class="info-card">
+          <h2>Адрес</h2>
+          <p>г. Самара, ул. Цветочная, 15</p>
+        </div>
+
+        <div class="info-card">
+          <h2>Телефон</h2>
+          <p>+7 900 889-99-99</p>
+        </div>
+
+        <div class="info-card">
+          <h2>График работы</h2>
+          <p>Ежедневно с 10:00 до 20:00</p>
+        </div>
+      </div>
+
+      <form class="contacts__form" id="contactForm">
+        <h2>Написать нам</h2>
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="tel" name="phone" placeholder="Телефон" required>
+        <textarea name="message" placeholder="Ваш вопрос" required></textarea>
+        <button class="btn btn--green" type="submit">Отправить</button>
+        <p class="form-message" id="contactMessage"></p>
+      </form>
+    </section>
+
+    <section class="map container">
+      <div class="map__placeholder">
+        <p>Здесь можно разместить карту или схему проезда</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>Florina — цветочный магазин</p>
+      <p>Демонстрационный сайт для дипломного проекта</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

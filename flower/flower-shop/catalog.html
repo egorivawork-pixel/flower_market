@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Каталог — Florina</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__main">Florina</span>
+        <span class="logo__sub">цветы и подарки</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" aria-label="Избранное">♡ <span id="favoriteCount">0</span></button>
+        <a class="icon-btn" href="cart.html">🛒 <span id="cartCount">0</span></a>
+        <button class="burger" id="burger" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero container">
+      <p class="eyebrow">/ каталог</p>
+      <h1>Букеты, наборы и воздушные шары</h1>
+      <p>Выберите готовый вариант или добавьте товар в корзину для оформления заказа.</p>
+    </section>
+
+    <section class="catalog container">
+      <aside class="filters">
+        <h2>Фильтр</h2>
+        <label>
+          Категория
+          <select id="categoryFilter">
+            <option value="all">Все товары</option>
+            <option value="combo">Комбо-наборы</option>
+            <option value="flowers">Букеты</option>
+            <option value="balloons">Шары</option>
+          </select>
+        </label>
+
+        <label>
+          Максимальная цена
+          <input type="range" id="priceFilter" min="2000" max="8000" step="500" value="8000">
+          <span id="priceValue">до 8 000 ₽</span>
+        </label>
+
+        <button class="btn btn--green" id="resetFilters" type="button">Сбросить</button>
+      </aside>
+
+      <div class="catalog__grid" id="catalogGrid">
+                  <article class="product-card" data-category="flowers" data-id="1" data-title="Ромашковое облако" data-price="5000">
+            <button class="like" data-like>♡</button>
+            <img src="images/Ромашковое облако.jpeg" alt="Ромашковое облако" />
+            <h3>Ромашковое облако</h3>
+            <p class="price">5 000 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="flowers" data-id="2" data-title="Выбирать чудо" data-price="7500">
+            <button class="like" data-like>♡</button>
+            <img src="images/Выбирать чудо.jpg" alt="Выбирать чудо" />
+            <h3>Выбирать чудо</h3>
+            <p class="price">7 500 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="flowers" data-id="3" data-title="Нежный повод" data-price="6500">
+            <button class="like" data-like>♡</button>
+            <img src="images/Нежный повод.jpg" alt="Нежный повод" />
+            <h3>Нежный повод</h3>
+            <p class="price">6 500 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="flowers" data-id="4" data-title="Оранжевое солнце" data-price="3500">
+            <button class="like" data-like>♡</button>
+            <img src="images/Оранжевое солнце.jpg" alt="Оранжевое солнце" />
+            <h3>Оранжевое солнце</h3>
+            <p class="price">3 500 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="flowers" data-id="5" data-title="Тёмная ночь" data-price="4600">
+            <button class="like" data-like>♡</button>
+            <img src="images/Тёмная ночь.jpg" alt="Тёмная ночь" />
+            <h3>Тёмная ночь</h3>
+            <p class="price">4 600 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="flowers" data-id="6" data-title="Тёплое признание" data-price="4200">
+            <button class="like" data-like>♡</button>
+            <img src="images/Тёплое признание.jpg" alt="Тёплое признание" />
+            <h3>Тёплое признание</h3>
+            <p class="price">4 200 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="flowers" data-id="7" data-title="Зима в сердце" data-price="2500">
+            <button class="like" data-like>♡</button>
+            <img src="images/Зима в сердце.jpg" alt="Зима в сердце" />
+            <h3>Зима в сердце</h3>
+            <p class="price">2 500 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="flowers" data-id="8" data-title="Плачут небеса" data-price="3300">
+            <button class="like" data-like>♡</button>
+            <img src="images/Плачут небеса.jpg" alt="Плачут небеса" />
+            <h3>Плачут небеса</h3>
+            <p class="price">3 300 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="flowers" data-id="9" data-title="Персиковый комплимент" data-price="5900">
+            <button class="like" data-like>♡</button>
+            <img src="images/Персиковый комплект.jpg" alt="Персиковый комплимент" />
+            <h3>Персиковый комплимент</h3>
+            <p class="price">5 900 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="flowers" data-id="10" data-title="Утренний свет" data-price="3900">
+            <button class="like" data-like>♡</button>
+            <img src="images/Утренний свет.jpg" alt="Утренний свет" />
+            <h3>Утренний свет</h3>
+            <p class="price">3 900 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="flowers" data-id="11" data-title="Лавандовый вечер" data-price="6900">
+            <button class="like" data-like>♡</button>
+            <img src="images/Лавандовыйbbc0be63ef5833856587eec7d766c3f6.jpg" alt="Лавандовый вечер" />
+            <h3>Лавандовый вечер</h3>
+            <p class="price">6 900 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="flowers" data-id="12" data-title="Кремовая нежность" data-price="6200">
+            <button class="like" data-like>♡</button>
+            <img src="images/Кремовый.jpg" alt="Кремовая нежность" />
+            <h3>Кремовая нежность</h3>
+            <p class="price">6 200 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="flowers" data-id="13" data-title="Солнечный акцент" data-price="3700">
+            <button class="like" data-like>♡</button>
+            <img src="images/Солнечный.jpg" alt="Солнечный акцент" />
+            <h3>Солнечный акцент</h3>
+            <p class="price">3 700 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="flowers" data-id="14" data-title="Вечерний букет" data-price="4800">
+            <button class="like" data-like>♡</button>
+            <img src="images/Вечерний.jpg" alt="Вечерний букет" />
+            <h3>Вечерний букет</h3>
+            <p class="price">4 800 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="flowers" data-id="15" data-title="Тёплая классика" data-price="4400">
+            <button class="like" data-like>♡</button>
+            <img src="images/Теплый.jpg" alt="Тёплая классика" />
+            <h3>Тёплая классика</h3>
+            <p class="price">4 400 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="flowers" data-id="17" data-title="Синий вечер" data-price="3100">
+            <button class="like" data-like>♡</button>
+            <img src="images/Синий вечер.jpg" alt="Синий вечер" />
+            <h3>Синий вечер</h3>
+            <p class="price">3 100 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="balloons" data-id="17" data-title="Синий вечер" data-price="3100">
+            <button class="like" data-like>♡</button>
+            <img src="images/Розовые шары.jpg" alt="Синий вечер" />
+            <h3>Розовые шары</h3>
+            <p class="price">1 500 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="balloons" data-id="17" data-title="Синий вечер" data-price="3100">
+            <button class="like" data-like>♡</button>
+            <img src="images/Белые шары.jpg" alt="Синий вечер" />
+            <h3>Белые шары</h3>
+            <p class="price">1 500 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="balloons" data-id="17" data-title="Синий вечер" data-price="3100">
+            <button class="like" data-like>♡</button>
+            <img src="images/Праздничные Шары.jpg" alt="Синий вечер" />
+            <h3>Праздничные шары</h3>
+            <p class="price">2 500 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="combo" data-id="17" data-title="Синий вечер" data-price="3100">
+            <button class="like" data-like>♡</button>
+            <img src="images/Комбо 1.jpg" alt="Синий вечер" />
+            <h3>Комбо 1</h3>
+            <p class="price">6 000 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+
+          <article class="product-card" data-category="combo" data-id="17" data-title="Синий вечер" data-price="3100">
+            <button class="like" data-like>♡</button>
+            <img src="images/Комбо день рождения.jpg" alt="Синий вечер" />
+            <h3>Комбо на день рождения</h3>
+            <p class="price">5 500 ₽</p>
+            <button class="card-btn" data-add>В корзину</button>
+          </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <a href="index.html" class="logo logo--footer">
+          <span class="logo__main">Florina</span>
+          <span class="logo__sub">цветы и подарки</span>
+        </a>
+        <p>Свежие букеты каждый день</p>
+      </div>
+      <div class="footer__contacts">
+        <p>+7 900 889-99-99</p>
+        <p>г. Самара, ул. Цветочная, 15</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
