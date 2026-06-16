@@ -3,7 +3,7 @@ const FAVORITE_KEY = "florina_favorites";
 
 // Вставь сюда ссылку Web App из Google Apps Script.
 // Ссылка должна заканчиваться на /exec
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbySyI2Njdx95Auq_V-vBDMD60QEorz0xSvNyi2DGVUwlLTM98HwGwBDUfIHdQPC87Hy/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzJkdxw4CF1FHnRSaedFSI_jAje-Gvggal9avG-KEc29i22k8NUlBgrCm3m7WYatpQB/exec";
 
 const getCart = () => JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
 const setCart = (cart) => localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
